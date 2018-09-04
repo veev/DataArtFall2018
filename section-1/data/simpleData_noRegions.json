@@ -1,0 +1,667 @@
+[
+ {
+  "country": "United Kingdom excluding England and Scotland", 
+  "estimate": "310243", 
+  "marginOfError": "9571"
+ }, 
+ {
+  "country": "England", 
+  "estimate": "319734", 
+  "marginOfError": "9589"
+ }, 
+ {
+  "country": "Scotland", 
+  "estimate": "53496", 
+  "marginOfError": "3645"
+ }, 
+ {
+  "country": "Ireland", 
+  "estimate": "120144", 
+  "marginOfError": "6262"
+ }, 
+ {
+  "country": "Denmark", 
+  "estimate": "29039", 
+  "marginOfError": "2609"
+ }, 
+ {
+  "country": "Norway", 
+  "estimate": "24982", 
+  "marginOfError": "2645"
+ }, 
+ {
+  "country": "Sweden", 
+  "estimate": "46335", 
+  "marginOfError": "3628"
+ }, 
+ {
+  "country": "Other Northern Europe", 
+  "estimate": "24671", 
+  "marginOfError": "2648"
+ }, 
+ {
+  "country": "Austria", 
+  "estimate": "43401", 
+  "marginOfError": "3026"
+ }, 
+ {
+  "country": "Belgium", 
+  "estimate": "34232", 
+  "marginOfError": "2938"
+ }, 
+ {
+  "country": "France", 
+  "estimate": "173561", 
+  "marginOfError": "8607"
+ }, 
+ {
+  "country": "Germany", 
+  "estimate": "585298", 
+  "marginOfError": "12124"
+ }, 
+ {
+  "country": "Netherlands", 
+  "estimate": "88580", 
+  "marginOfError": "6180"
+ }, 
+ {
+  "country": "Switzerland", 
+  "estimate": "37115", 
+  "marginOfError": "3317"
+ }, 
+ {
+  "country": "Other Western Europe", 
+  "estimate": "2527", 
+  "marginOfError": "776"
+ }, 
+ {
+  "country": "Greece", 
+  "estimate": "141325", 
+  "marginOfError": "6452"
+ }, 
+ {
+  "country": "Italy", 
+  "estimate": "352492", 
+  "marginOfError": "11766"
+ }, 
+ {
+  "country": "Portugal", 
+  "estimate": "176803", 
+  "marginOfError": "8390"
+ }, 
+ {
+  "country": "Azores Islands", 
+  "estimate": "27072", 
+  "marginOfError": "3439"
+ }, 
+ {
+  "country": "Spain", 
+  "estimate": "108953", 
+  "marginOfError": "6903"
+ }, 
+ {
+  "country": "Other Southern Europe", 
+  "estimate": "8194", 
+  "marginOfError": "2545"
+ }, 
+ {
+  "country": "Albania", 
+  "estimate": "89744", 
+  "marginOfError": "9135"
+ }, 
+ {
+  "country": "Belarus", 
+  "estimate": "56958", 
+  "marginOfError": "5339"
+ }, 
+ {
+  "country": "Bulgaria", 
+  "estimate": "67377", 
+  "marginOfError": "5183"
+ }, 
+ {
+  "country": "Croatia", 
+  "estimate": "36978", 
+  "marginOfError": "3546"
+ }, 
+ {
+  "country": "Czechoslovakia (includes Czech Republic and Slovakia)", 
+  "estimate": "66631", 
+  "marginOfError": "5112"
+ }, 
+ {
+  "country": "Hungary", 
+  "estimate": "70255", 
+  "marginOfError": "5330"
+ }, 
+ {
+  "country": "Latvia", 
+  "estimate": "21364", 
+  "marginOfError": "2476"
+ }, 
+ {
+  "country": "Lithuania", 
+  "estimate": "31458", 
+  "marginOfError": "3872"
+ }, 
+ {
+  "country": "Macedonia", 
+  "estimate": "26277", 
+  "marginOfError": "4621"
+ }, 
+ {
+  "country": "Moldova", 
+  "estimate": "43564", 
+  "marginOfError": "5058"
+ }, 
+ {
+  "country": "Poland", 
+  "estimate": "419332", 
+  "marginOfError": "12547"
+ }, 
+ {
+  "country": "Romania", 
+  "estimate": "159546", 
+  "marginOfError": "7917"
+ }, 
+ {
+  "country": "Russia", 
+  "estimate": "386529", 
+  "marginOfError": "13859"
+ }, 
+ {
+  "country": "Ukraine", 
+  "estimate": "345620", 
+  "marginOfError": "11934"
+ }, 
+ {
+  "country": "Bosnia and Herzegovina", 
+  "estimate": "107969", 
+  "marginOfError": "9021"
+ }, 
+ {
+  "country": "Serbia", 
+  "estimate": "36969", 
+  "marginOfError": "4673"
+ }, 
+ {
+  "country": "Other Eastern Europe", 
+  "estimate": "130469", 
+  "marginOfError": "8453"
+ }, 
+ {
+  "country": "China excluding Hong Kong and Taiwan", 
+  "estimate": "2065431", 
+  "marginOfError": "33869"
+ }, 
+ {
+  "country": "Hong Kong", 
+  "estimate": "233373", 
+  "marginOfError": "7808"
+ }, 
+ {
+  "country": "Taiwan", 
+  "estimate": "377893", 
+  "marginOfError": "12637"
+ }, 
+ {
+  "country": "Japan", 
+  "estimate": "335767", 
+  "marginOfError": "11198"
+ }, 
+ {
+  "country": "Korea", 
+  "estimate": "1060019", 
+  "marginOfError": "20054"
+ }, 
+ {
+  "country": "Other Eastern Asia", 
+  "estimate": "13389", 
+  "marginOfError": "3024"
+ }, 
+ {
+  "country": "Afghanistan", 
+  "estimate": "70653", 
+  "marginOfError": "6928"
+ }, 
+ {
+  "country": "Bangladesh", 
+  "estimate": "228682", 
+  "marginOfError": "14479"
+ }, 
+ {
+  "country": "India", 
+  "estimate": "2389639", 
+  "marginOfError": "31113"
+ }, 
+ {
+  "country": "Iran", 
+  "estimate": "394223", 
+  "marginOfError": "14189"
+ }, 
+ {
+  "country": "Kazakhstan", 
+  "estimate": "29859", 
+  "marginOfError": "3389"
+ }, 
+ {
+  "country": "Nepal", 
+  "estimate": "120886", 
+  "marginOfError": "8823"
+ }, 
+ {
+  "country": "Pakistan", 
+  "estimate": "379435", 
+  "marginOfError": "17427"
+ }, 
+ {
+  "country": "Sri Lanka", 
+  "estimate": "52971", 
+  "marginOfError": "5613"
+ }, 
+ {
+  "country": "Uzbekistan", 
+  "estimate": "65375", 
+  "marginOfError": "5987"
+ }, 
+ {
+  "country": "Other South Central Asia", 
+  "estimate": "65719", 
+  "marginOfError": "7114"
+ }, 
+ {
+  "country": "Cambodia", 
+  "estimate": "166268", 
+  "marginOfError": "9301"
+ }, 
+ {
+  "country": "Indonesia", 
+  "estimate": "90833", 
+  "marginOfError": "7010"
+ }, 
+ {
+  "country": "Laos", 
+  "estimate": "197016", 
+  "marginOfError": "9812"
+ }, 
+ {
+  "country": "Malaysia", 
+  "estimate": "69308", 
+  "marginOfError": "5119"
+ }, 
+ {
+  "country": "Burma", 
+  "estimate": "137567", 
+  "marginOfError": "10011"
+ }, 
+ {
+  "country": "Philippines", 
+  "estimate": "1982369", 
+  "marginOfError": "30007"
+ }, 
+ {
+  "country": "Singapore", 
+  "estimate": "36252", 
+  "marginOfError": "3382"
+ }, 
+ {
+  "country": "Thailand", 
+  "estimate": "247205", 
+  "marginOfError": "10349"
+ }, 
+ {
+  "country": "Vietnam", 
+  "estimate": "1300515", 
+  "marginOfError": "27733"
+ }, 
+ {
+  "country": "Other South Eastern Asia", 
+  "estimate": "1625", 
+  "marginOfError": "673"
+ }, 
+ {
+  "country": "Iraq", 
+  "estimate": "215193", 
+  "marginOfError": "13794"
+ }, 
+ {
+  "country": "Israel", 
+  "estimate": "129680", 
+  "marginOfError": "6876"
+ }, 
+ {
+  "country": "Jordan", 
+  "estimate": "81767", 
+  "marginOfError": "8063"
+ }, 
+ {
+  "country": "Kuwait", 
+  "estimate": "31781", 
+  "marginOfError": "3643"
+ }, 
+ {
+  "country": "Lebanon", 
+  "estimate": "119613", 
+  "marginOfError": "8361"
+ }, 
+ {
+  "country": "Saudi Arabia", 
+  "estimate": "96783", 
+  "marginOfError": "8403"
+ }, 
+ {
+  "country": "Syria", 
+  "estimate": "82681", 
+  "marginOfError": "6286"
+ }, 
+ {
+  "country": "Yemen", 
+  "estimate": "44337", 
+  "marginOfError": "6088"
+ }, 
+ {
+  "country": "Turkey", 
+  "estimate": "116336", 
+  "marginOfError": "8283"
+ }, 
+ {
+  "country": "Armenia", 
+  "estimate": "86217", 
+  "marginOfError": "6658"
+ }, 
+ {
+  "country": "Other Western Asia", 
+  "estimate": "83981", 
+  "marginOfError": "7429"
+ }, 
+ {
+  "country": "Eritrea", 
+  "estimate": "39063", 
+  "marginOfError": "5274"
+ }, 
+ {
+  "country": "Ethiopia", 
+  "estimate": "228745", 
+  "marginOfError": "13680"
+ }, 
+ {
+  "country": "Kenya", 
+  "estimate": "129905", 
+  "marginOfError": "10130"
+ }, 
+ {
+  "country": "Somalia", 
+  "estimate": "89153", 
+  "marginOfError": "7277"
+ }, 
+ {
+  "country": "Other Eastern Africa", 
+  "estimate": "125694", 
+  "marginOfError": "9018"
+ }, 
+ {
+  "country": "Middle Africa", 
+  "estimate": "128584", 
+  "marginOfError": "11508"
+ }, 
+ {
+  "country": "Cameroon", 
+  "estimate": "51172", 
+  "marginOfError": "7568"
+ }, 
+ {
+  "country": "Other Middle Africa", 
+  "estimate": "77412", 
+  "marginOfError": "9776"
+ }, 
+ {
+  "country": "Egypt", 
+  "estimate": "185872", 
+  "marginOfError": "11556"
+ }, 
+ {
+  "country": "Morocco", 
+  "estimate": "71654", 
+  "marginOfError": "5503"
+ }, 
+ {
+  "country": "Sudan", 
+  "estimate": "46037", 
+  "marginOfError": "6708"
+ }, 
+ {
+  "country": "Other Northern Africa", 
+  "estimate": "42269", 
+  "marginOfError": "4655"
+ }, 
+ {
+  "country": "South Africa", 
+  "estimate": "94141", 
+  "marginOfError": "5867"
+ }, 
+ {
+  "country": "Other Southern Africa", 
+  "estimate": "4724", 
+  "marginOfError": "1384"
+ }, 
+ {
+  "country": "Cabo Verde", 
+  "estimate": "43352", 
+  "marginOfError": "5264"
+ }, 
+ {
+  "country": "Ghana", 
+  "estimate": "155532", 
+  "marginOfError": "10846"
+ }, 
+ {
+  "country": "Liberia", 
+  "estimate": "79497", 
+  "marginOfError": "7804"
+ }, 
+ {
+  "country": "Nigeria", 
+  "estimate": "323635", 
+  "marginOfError": "18271"
+ }, 
+ {
+  "country": "Sierra Leone", 
+  "estimate": "42065", 
+  "marginOfError": "5812"
+ }, 
+ {
+  "country": "Other Western Africa", 
+  "estimate": "122260", 
+  "marginOfError": "9856"
+ }, 
+ {
+  "country": "Australia", 
+  "estimate": "83573", 
+  "marginOfError": "5527"
+ }, 
+ {
+  "country": "Other Australian and New Zealand Subregion", 
+  "estimate": "29704", 
+  "marginOfError": "2990"
+ }, 
+ {
+  "country": "Fiji", 
+  "estimate": "41936", 
+  "marginOfError": "4822"
+ }, 
+ {
+  "country": "Caribbean", 
+  "estimate": "4165453", 
+  "marginOfError": "49473"
+ }, 
+ {
+  "country": "Bahamas", 
+  "estimate": "34796", 
+  "marginOfError": "3735"
+ }, 
+ {
+  "country": "Barbados", 
+  "estimate": "51739", 
+  "marginOfError": "4829"
+ }, 
+ {
+  "country": "Cuba", 
+  "estimate": "1210674", 
+  "marginOfError": "23840"
+ }, 
+ {
+  "country": "Dominica", 
+  "estimate": "32370", 
+  "marginOfError": "4110"
+ }, 
+ {
+  "country": "Dominican Republic", 
+  "estimate": "1063239", 
+  "marginOfError": "28770"
+ }, 
+ {
+  "country": "Grenada", 
+  "estimate": "29982", 
+  "marginOfError": "3185"
+ }, 
+ {
+  "country": "Haiti", 
+  "estimate": "675546", 
+  "marginOfError": "22289"
+ }, 
+ {
+  "country": "Jamaica", 
+  "estimate": "711134", 
+  "marginOfError": "19231"
+ }, 
+ {
+  "country": "St. Vincent and the Grenadines", 
+  "estimate": "22950", 
+  "marginOfError": "2820"
+ }, 
+ {
+  "country": "Trinidad and Tobago", 
+  "estimate": "227295", 
+  "marginOfError": "8816"
+ }, 
+ {
+  "country": "West Indies", 
+  "estimate": "33011", 
+  "marginOfError": "4485"
+ }, 
+ {
+  "country": "Other Caribbean", 
+  "estimate": "72717", 
+  "marginOfError": "6064"
+ }, 
+ {
+  "country": "Mexico", 
+  "estimate": "11643298", 
+  "marginOfError": "77644"
+ }, 
+ {
+  "country": "Belize", 
+  "estimate": "48811", 
+  "marginOfError": "5371"
+ }, 
+ {
+  "country": "Costa Rica", 
+  "estimate": "90109", 
+  "marginOfError": "5646"
+ }, 
+ {
+  "country": "El Salvador", 
+  "estimate": "1352357", 
+  "marginOfError": "31379"
+ }, 
+ {
+  "country": "Guatemala", 
+  "estimate": "927593", 
+  "marginOfError": "23812"
+ }, 
+ {
+  "country": "Honduras", 
+  "estimate": "599030", 
+  "marginOfError": "25695"
+ }, 
+ {
+  "country": "Nicaragua", 
+  "estimate": "256171", 
+  "marginOfError": "12391"
+ }, 
+ {
+  "country": "Panama", 
+  "estimate": "103625", 
+  "marginOfError": "5810"
+ }, 
+ {
+  "country": "Other Central America", 
+  "estimate": "6933", 
+  "marginOfError": "1586"
+ }, 
+ {
+  "country": "Argentina", 
+  "estimate": "181233", 
+  "marginOfError": "9339"
+ }, 
+ {
+  "country": "Bolivia", 
+  "estimate": "78093", 
+  "marginOfError": "6898"
+ }, 
+ {
+  "country": "Brazil", 
+  "estimate": "361374", 
+  "marginOfError": "15675"
+ }, 
+ {
+  "country": "Chile", 
+  "estimate": "95104", 
+  "marginOfError": "6986"
+ }, 
+ {
+  "country": "Colombia", 
+  "estimate": "699399", 
+  "marginOfError": "20772"
+ }, 
+ {
+  "country": "Ecuador", 
+  "estimate": "441257", 
+  "marginOfError": "19017"
+ }, 
+ {
+  "country": "Guyana", 
+  "estimate": "281408", 
+  "marginOfError": "12349"
+ }, 
+ {
+  "country": "Peru", 
+  "estimate": "445921", 
+  "marginOfError": "17981"
+ }, 
+ {
+  "country": "Uruguay", 
+  "estimate": "43971", 
+  "marginOfError": "5051"
+ }, 
+ {
+  "country": "Venezuela", 
+  "estimate": "255520", 
+  "marginOfError": "13320"
+ }, 
+ {
+  "country": "Other South America", 
+  "estimate": "34749", 
+  "marginOfError": "3674"
+ }, 
+ {
+  "country": "Canada", 
+  "estimate": "830628", 
+  "marginOfError": "17129"
+ }, 
+ {
+  "country": "Other Northern America", 
+  "estimate": "7848", 
+  "marginOfError": "1589"
+ }
+]
