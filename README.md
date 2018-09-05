@@ -80,7 +80,7 @@ Since we’re not using a percentage-based grading system, let me put it another
 * Data (Self)Portrait: Create a self-portrait or portrait of someone else. Portrait must be derived from a data set
 * Due Week 4, September 25th. Documentation should be posted and a link emailed before class begins
 
-September 4th – Week 1. The lay of the land & introductions
+September 4th – Week 1. The lay of the land & introductions - [slides](https://drive.google.com/open?id=1kgTB-9lz4qS0vNXsMAGZpL9nSZWpjmgD) shown in class
 
 September 11th – Week 2. Topic Survey & technical workshop (data translation)
 
