@@ -94,6 +94,7 @@ September 25th - Week 4. Guest Speaker (TBD) & Project presentations
 * [Consider the Boolean,](https://source.opennews.org/articles/consider-boolean) Jacob Harris
 * [On a Collections as Data Imperative,](http://digitalpreservation.gov/meetings/dcs16/tpadilla_OnaCollectionsasDataImperative_final.pdf) Thomas Padilla
 * [A Sea of Data: Apophenia and Pattern (Mis-)Recognition,](http://www.e-flux.com/journal/72/60480/a-sea-of-data-apophenia-and-pattern-mis-recognition/) Hito Steyerl
+* [Abundant Images and the Collective Sublime,](http://circulationexchange.org/articles/abundantimages.html) Kate Palmer Albers
 
 October 2nd – Week 5. Topic survey & technical workshop (RiTA)
 
