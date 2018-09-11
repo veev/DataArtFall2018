@@ -117,9 +117,7 @@ October 30th – Week 8. Topic survey & technical workshop (Web Maps / Public Da
 
 November 6th – Week 9. Discussion of readings & overview of other resources (Leaflet.js / Mapbox GL / Mappa + p5.js)
 
-November 13th – Week 10. Technical workshop (THREE.js / Unity)
-
-November 20th – Week 11. Guest Speaker (TBD) & Project presentations
+November 13th – Week 10. Guest Speaker (TBD) & Project presentations
 
 ### Ethics, Humans & Responsibility
 
@@ -129,7 +127,9 @@ November 20th – Week 11. Guest Speaker (TBD) & Project presentations
 * [A chronology of tactics: Art tackles Big Data and the environment,](http://journals.sagepub.com/doi/abs/10.1177/2053951716665869) Brooke Singer
 * [You Say Data, I Say System,](https://hackernoon.com/you-say-data-i-say-system-54e84aa7a421) Jer Thorp
 
-November 27th – Week 12. Topic survey & technical workshop (D3)
+November 20th – Week 11. Topic survey & technical workshop (D3)
+
+November 27th – Week 12. Technical workshop (THREE.js / Unity)
 
 December 4th – Week 13. Discussion of readings & overview of other resources
 
