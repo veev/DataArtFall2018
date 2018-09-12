@@ -82,7 +82,7 @@ Since we’re not using a percentage-based grading system, let me put it another
 
 September 4th – Week 1. The lay of the land & introductions - [slides](https://drive.google.com/open?id=1kgTB-9lz4qS0vNXsMAGZpL9nSZWpjmgD) shown in class
 
-September 11th – Week 2. Topic Survey & technical workshop (data translation)
+September 11th – Week 2. Topic Survey & technical overview (data translation) - [slides](https://drive.google.com/open?id=1lZocBzoTYxg54XfVdBbSKh30wq6pnhFb) shown in class
 
 September 18th – Week 3. Discussion of readings & technical workshop (p5.js)
 
