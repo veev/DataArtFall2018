@@ -77,14 +77,14 @@ Since we’re not using a percentage-based grading system, let me put it another
 * [How I Learned to Love Data Visualization (Again),](https://vimeo.com/159297152) Jon Schwabish speaking at the 2015 Visualized Conference
 
 **Assignment:** 
-* Data (Self)Portrait: Create a self-portrait or portrait of someone else. Portrait must be derived from a data set
+* Data (Self)Portrait: Create a self-portrait or portrait of someone else. The portrait must be derived from a data set, or use data as a material.
 * Due Week 4, September 25th. Documentation should be posted and a link emailed before class begins
 
 September 4th – Week 1. The lay of the land & introductions - [slides](https://drive.google.com/open?id=1kgTB-9lz4qS0vNXsMAGZpL9nSZWpjmgD) shown in class
 
 September 11th – Week 2. Topic Survey & technical overview (data translation) - [slides](https://drive.google.com/open?id=1lZocBzoTYxg54XfVdBbSKh30wq6pnhFb) shown in class
 
-September 18th – Week 3. Discussion of readings & technical workshop (p5.js)
+September 18th – Week 3. Discussion of readings & technical workshop (p5.js / D3)
 
 September 25th - Week 4. Guest Speaker (TBD) & Project presentations
 
@@ -127,7 +127,7 @@ November 13th – Week 10. Guest Speaker (TBD) & Project presentations
 * [A chronology of tactics: Art tackles Big Data and the environment,](http://journals.sagepub.com/doi/abs/10.1177/2053951716665869) Brooke Singer
 * [You Say Data, I Say System,](https://hackernoon.com/you-say-data-i-say-system-54e84aa7a421) Jer Thorp
 
-November 20th – Week 11. Topic survey & technical workshop (D3)
+November 20th – Week 11. Topic survey & overview of the landscape
 
 November 27th – Week 12. Technical workshop (THREE.js / Unity)
 
