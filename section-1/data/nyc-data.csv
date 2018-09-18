@@ -1,0 +1,162 @@
+country/region,estimate,marginOfError
+Europe,"474,312","+/-11,900"
+Northern Europe,"52,372","+/-4,120"
+United Kingdom (inc. Crown Dependencies),"33,824","+/-3,643"
+"United Kingdom, excluding England and Scotland","18,084","+/-2,554"
+England,"14,550","+/-2,511"
+Scotland,"1,190",+/-653
+Ireland,"12,669","+/-1,947"
+Denmark,"1,197",+/-572
+Norway,"1,057",+/-488
+Sweden,"2,914",+/-977
+Other Northern Europe,711,+/-581
+Western Europe:,"53,443","+/-4,409"
+Austria,"5,108","+/-1,316"
+Belgium,"3,364","+/-1,054"
+France,"19,354","+/-2,850"
+Germany,"18,502","+/-2,102"
+Netherlands,"3,348","+/-1,296"
+Switzerland,"3,626","+/-1,657"
+Other Western Europe,141,+/-146
+Southern Europe:,"81,889","+/-4,739"
+Greece,"20,409","+/-2,704"
+Italy,"47,124","+/-3,475"
+Portugal,"1,948",+/-811
+Azores Islands,0,+/-190
+Spain,"10,323","+/-2,292"
+Other Southern Europe,"2,085","+/-2,093"
+Eastern Europe:,"285,759","+/-10,381"
+Albania,"19,072","+/-3,768"
+Belarus,"11,252","+/-1,790"
+Bulgaria,"5,527","+/-1,467"
+Croatia,"4,101",+/-893
+Czechoslovakia (includes Czech Republic and Slovakia),"5,007","+/-1,293"
+Hungary,"7,554","+/-1,828"
+Latvia,"1,965",+/-756
+Lithuania,"2,594",+/-802
+Macedonia,"3,666","+/-2,398"
+Moldova,"4,668","+/-1,125"
+Poland,"50,272","+/-5,065"
+Romania,"12,495","+/-2,143"
+Russia,"59,668","+/-5,051"
+Ukraine,"66,798","+/-4,971"
+Bosnia and Herzegovina,"1,684",+/-838
+Serbia,"3,949","+/-1,885"
+Other Eastern Europe,"25,487","+/-4,496"
+"Europe, n.e.c.",849,+/-442
+Asia,"944,962","+/-13,932"
+Eastern Asia:,"473,725","+/-13,182"
+China:,"388,783","+/-12,570"
+"China, excluding Hong Kong and Taiwan","331,465","+/-12,853"
+Hong Kong,"36,534","+/-3,333"
+Taiwan,"20,784","+/-2,573"
+Japan,"19,378","+/-3,130"
+Korea,"65,528","+/-5,903"
+Other Eastern Asia,36,+/-59
+South Central Asia:,"280,556","+/-15,047"
+Afghanistan,"3,504","+/-1,806"
+Bangladesh,"82,351","+/-7,520"
+India,"87,796","+/-8,123"
+Iran,"5,832","+/-1,618"
+Kazakhstan,"3,473","+/-1,120"
+Nepal,"9,147","+/-2,644"
+Pakistan,"47,111","+/-6,587"
+Sri Lanka,"5,051","+/-1,701"
+Uzbekistan,"32,947","+/-5,247"
+Other South Central Asia,"3,344","+/-1,009"
+South Eastern Asia:,"107,397","+/-7,259"
+Cambodia,"1,591",+/-704
+Indonesia,"3,760","+/-1,159"
+Laos,170,+/-189
+Malaysia,"9,144","+/-2,272"
+Burma,"8,636","+/-2,524"
+Philippines,"60,266","+/-6,336"
+Singapore,"2,839",+/-863
+Thailand,"5,939","+/-1,712"
+Vietnam,"15,052","+/-3,253"
+Other South Eastern Asia,0,+/-190
+Western Asia:,"80,817","+/-6,671"
+Iraq,765,+/-465
+Israel,"25,325","+/-3,190"
+Jordan,"1,691",+/-745
+Kuwait,"1,516",+/-951
+Lebanon,"4,328","+/-1,425"
+Saudi Arabia,"1,541",+/-833
+Syria,"4,962","+/-1,410"
+Yemen,"12,821","+/-3,452"
+Turkey,"10,806","+/-2,608"
+Armenia,"2,801","+/-1,973"
+Other Western Asia,"14,261","+/-2,687"
+"Asia,n.e.c.","2,467","+/-1,003"
+Africa,"146,652","+/-10,447"
+Eastern Africa,"8,045","+/-1,588"
+Eritrea,285,+/-309
+Ethiopia,"2,106",+/-984
+Kenya,"2,311","+/-1,105"
+Somalia,354,+/-580
+Other Eastern Africa,"2,989","+/-1,060"
+Middle Africa:,"1,877",+/-614
+Cameroon,421,+/-319
+Other Middle Africa,"1,456",+/-545
+Northern Africa,"30,799","+/-4,041"
+Egypt,"18,813","+/-3,313"
+Morocco,"6,439","+/-1,659"
+Sudan,"1,916","+/-1,299"
+Other Northern Africa,"3,631","+/-1,266"
+Southern Africa,"4,127","+/-1,725"
+South Africa,"3,407","+/-1,438"
+Other Southern Africa,720,+/-781
+Western Africa,"89,397","+/-8,804"
+Cabo Verde,0,+/-190
+Ghana,"28,133","+/-4,803"
+Liberia,"2,214","+/-1,087"
+Nigeria,"26,206","+/-4,203"
+Sierra Leone,"2,084","+/-1,119"
+Other Western Africa,"30,760","+/-5,978"
+"Africa, n.e.c.","12,407","+/-3,173"
+Oceania,"10,259","+/-1,696"
+Australia and New Zealand Subregion,"9,687","+/-1,738"
+Australia,"8,259","+/-1,716"
+Other Australian and New Zealand Subregion,"1,428",+/-561
+Fiji,0,+/-190
+"Oceania, n.e.c.",572,+/-365
+Americas,"1,636,281","+/-21,181"
+Latin America,"1,611,888","+/-21,298"
+Caribbean,"888,594","+/-21,464"
+Bahamas,657,+/-403
+Barbados,"20,194","+/-2,695"
+Cuba,"15,667","+/-2,476"
+Dominica,"8,065","+/-1,962"
+Dominican Republic,"433,473","+/-17,926"
+Grenada,"19,186","+/-2,353"
+Haiti,"89,368","+/-7,376"
+Jamaica,"170,211","+/-9,315"
+St. Vincent and the Grenadines,"14,547","+/-2,472"
+Trinidad and Tobago,"86,439","+/-5,385"
+West Indies,"10,951","+/-2,058"
+Other Caribbean,"19,836","+/-2,636"
+Central America,"301,343","+/-13,916"
+Mexico,"180,329","+/-11,806"
+Belize,"5,660","+/-1,359"
+Costa Rica,"4,597","+/-1,731"
+El Salvador,"28,269","+/-4,435"
+Guatemala,"28,805","+/-5,330"
+Honduras,"28,691","+/-4,343"
+Nicaragua,"8,503","+/-2,283"
+Panama,"16,213","+/-2,716"
+Other Central America,276,+/-268
+South America:,"421,951","+/-14,045"
+Argentina,"11,117","+/-2,588"
+Bolivia,"2,981","+/-1,059"
+Brazil,"13,124","+/-2,113"
+Chile,"3,944","+/-1,194"
+Colombia,"71,135","+/-6,556"
+Ecuador,"129,108","+/-10,599"
+Guyana,"144,909","+/-6,866"
+Peru,"30,077","+/-4,298"
+Uruguay,"2,439",+/-920
+Venezuela,"8,237","+/-2,202"
+Other South America,"4,880","+/-1,276"
+Northern America,"24,393","+/-3,333"
+Canada,"23,848","+/-3,304"
+Other Northern America,545,+/-353
