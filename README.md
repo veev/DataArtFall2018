@@ -84,7 +84,7 @@ September 4th – Week 1. The lay of the land & introductions - [slides](https:/
 
 September 11th – Week 2. Topic Survey & technical overview (data translation) - [slides](https://drive.google.com/open?id=1lZocBzoTYxg54XfVdBbSKh30wq6pnhFb) shown in class
 
-September 18th – Week 3. Discussion of readings & technical workshop (p5.js / D3)
+September 18th – Week 3. Discussion of readings & technical workshop (ES6 Intro) - [slides](https://drive.google.com/file/d/1wK1-iiQkN0Upe5ulnRf9KZaftPBptr1i/view?usp=sharing) shown in class
 
 September 25th - Week 4. Guest Speaker (TBD) & Project presentations
 
