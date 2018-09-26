@@ -86,7 +86,7 @@ September 11th – Week 2. Topic Survey & technical overview (data translation) 
 
 September 18th – Week 3. Discussion of readings & technical workshop (ES6 Intro) - [slides](https://drive.google.com/file/d/1wK1-iiQkN0Upe5ulnRf9KZaftPBptr1i/view?usp=sharing) shown in class
 
-September 25th - Week 4. Guest Speaker (TBD) & Project presentations
+September 25th - Week 4. Guest Speaker ([Brian House](https://brianhouse.net/)) & [Project](https://github.com/veev/DataArtFall2018/wiki/Data-(Self)-Portrait) presentations
 
 ### Text, Archives & Memory Stores
 
