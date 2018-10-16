@@ -1,0 +1,387 @@
+[ {
+    "_id": "58ae56467b947e2e79a2f7b3",
+    "distance": 92.26509407076,
+    "review_count": 1162,
+    "name": "NY Pizza Suprema",
+    "rating": 4,
+    "url": "https://www.yelp.com/biz/ny-pizza-suprema-new-york?adjust_creative=ArEVrZ-_cCxPph97oAQkgg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ArEVrZ-_cCxPph97oAQkgg",
+    "price": "$",
+    "coordinates": {
+      "latitude": 40.7502059936523,
+      "longitude": -73.9953231811523
+    },
+    "phone": "+12125948939",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/EqbDXneMuQP6pw6GemVdQA/o.jpg",
+    "is_closed": false,
+    "display_phone": "(212) 594-8939",
+    "id": "ny-pizza-suprema-new-york",
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "location": {
+      "city": "New York",
+      "display_address": [
+        "413 8th Ave",
+        "New York, NY 10001"
+      ],
+      "address1": "413 8th Ave",
+      "address2": "",
+      "address3": "",
+      "state": "NY",
+      "country": "US",
+      "zip_code": "10001"
+    }
+  },
+  {
+    "_id": "58ae56467b947e2e79a2f7ec",
+    "distance": 555.4650850324,
+    "review_count": 619,
+    "name": "Waldy's Wood Fired Pizza & Penne",
+    "rating": 4,
+    "url": "https://www.yelp.com/biz/waldys-wood-fired-pizza-and-penne-new-york-5?adjust_creative=ArEVrZ-_cCxPph97oAQkgg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ArEVrZ-_cCxPph97oAQkgg",
+    "price": "$$",
+    "coordinates": {
+      "latitude": 40.7457666039821,
+      "longitude": -73.9906402533629
+    },
+    "phone": "+12122135042",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/eWJp5A0mUFj7mkq4DKdkbw/o.jpg",
+    "is_closed": false,
+    "display_phone": "(212) 213-5042",
+    "id": "waldys-wood-fired-pizza-and-penne-new-york-5",
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "location": {
+      "city": "New York",
+      "display_address": [
+        "800 6th Ave",
+        "New York, NY 10001"
+      ],
+      "address1": "800 6th Ave",
+      "address2": null,
+      "address3": "",
+      "state": "NY",
+      "country": "US",
+      "zip_code": "10001"
+    }
+  },
+  {
+    "_id": "58ae56467b947e2e79a2f7fc",
+    "distance": 797.8492952119999,
+    "review_count": 90,
+    "name": "PN Wood Fired Pizza",
+    "rating": 4.5,
+    "url": "https://www.yelp.com/biz/pn-wood-fired-pizza-new-york?adjust_creative=ArEVrZ-_cCxPph97oAQkgg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ArEVrZ-_cCxPph97oAQkgg",
+    "price": "$$",
+    "coordinates": {
+      "latitude": 40.74475,
+      "longitude": -73.98772
+    },
+    "phone": "+16469644834",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/aihAr203sHKecqsTHjwgUg/o.jpg",
+    "is_closed": false,
+    "display_phone": "(646) 964-4834",
+    "id": "pn-wood-fired-pizza-new-york",
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "location": {
+      "city": "New York",
+      "display_address": [
+        "2 W 28th St",
+        "New York, NY 10001"
+      ],
+      "address1": "2 W 28th St",
+      "address2": "",
+      "address3": "",
+      "state": "NY",
+      "country": "US",
+      "zip_code": "10001"
+    }
+  },
+  {
+    "_id": "58ae56467b947e2e79a2f803",
+    "distance": 206.86956864739997,
+    "review_count": 171,
+    "name": "Rose's Pizza and Pasta",
+    "rating": 3.5,
+    "url": "https://www.yelp.com/biz/roses-pizza-and-pasta-new-york?adjust_creative=ArEVrZ-_cCxPph97oAQkgg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ArEVrZ-_cCxPph97oAQkgg",
+    "price": "$",
+    "coordinates": {
+      "latitude": 40.7516241,
+      "longitude": -73.9924959
+    },
+    "phone": "+12126297455",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/SdCLlrUyD3QzTvFOl_afTQ/o.jpg",
+    "is_closed": false,
+    "display_phone": "(212) 629-7455",
+    "id": "roses-pizza-and-pasta-new-york",
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "italian",
+        "title": "Italian"
+      }
+    ],
+    "location": {
+      "city": "New York",
+      "display_address": [
+        "1 Penn Plz",
+        "New York, NY 10119"
+      ],
+      "address1": "1 Penn Plz",
+      "address2": null,
+      "address3": "",
+      "state": "NY",
+      "country": "US",
+      "zip_code": "10119"
+    }
+  },
+  {
+    "_id": "58ae56467b947e2e79a2f911",
+    "distance": 176.869523746,
+    "is_closed": false,
+    "review_count": 58,
+    "name": "Don Pepi Pizza",
+    "rating": 3.5,
+    "url": "https://www.yelp.com/biz/don-pepi-pizza-new-york?adjust_creative=ArEVrZ-_cCxPph97oAQkgg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ArEVrZ-_cCxPph97oAQkgg",
+    "price": "$",
+    "coordinates": {
+      "latitude": 40.7506946,
+      "longitude": -73.9923316
+    },
+    "phone": "+12129674385",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/E5R4k6ZQGn3PqfaHJmd9RQ/o.jpg",
+    "location": {
+      "city": "New York",
+      "display_address": [
+        "2 Pennsylvania Plz",
+        "New York, NY 10121"
+      ],
+      "address1": "2 Pennsylvania Plz",
+      "address2": "",
+      "address3": "",
+      "state": "NY",
+      "country": "US",
+      "zip_code": "10121"
+    },
+    "display_phone": "(212) 967-4385",
+    "id": "don-pepi-pizza-new-york",
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ]
+  },
+  {
+    "_id": "58ae56467b947e2e79a2f94e",
+    "distance": 680.9490585011999,
+    "review_count": 54,
+    "name": "Highline Pizza",
+    "rating": 4,
+    "url": "https://www.yelp.com/biz/highline-pizza-new-york?adjust_creative=ArEVrZ-_cCxPph97oAQkgg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ArEVrZ-_cCxPph97oAQkgg",
+    "price": "$",
+    "coordinates": {
+      "latitude": 40.751049,
+      "longitude": -74.0020523
+    },
+    "phone": "+12125643330",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/TC4FAQrrw4ptQDaOfibe0g/o.jpg",
+    "is_closed": false,
+    "display_phone": "(212) 564-3330",
+    "id": "highline-pizza-new-york",
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "location": {
+      "city": "New York",
+      "display_address": [
+        "503 W 28th St",
+        "New York, NY 10001"
+      ],
+      "address1": "503 W 28th St",
+      "address2": null,
+      "address3": "",
+      "state": "NY",
+      "country": "US",
+      "zip_code": "10001"
+    }
+  },
+  {
+    "_id": "58ae56467b947e2e79a2f951",
+    "distance": 612.2298220728,
+    "review_count": 172,
+    "name": "Lazzara's Pizza",
+    "rating": 3.5,
+    "url": "https://www.yelp.com/biz/lazzaras-pizza-new-york?adjust_creative=ArEVrZ-_cCxPph97oAQkgg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ArEVrZ-_cCxPph97oAQkgg",
+    "price": "$$",
+    "coordinates": {
+      "latitude": 40.754057,
+      "longitude": -73.989497
+    },
+    "phone": "+12129447792",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/0TJfObqXkm4u_O888DT7lA/o.jpg",
+    "is_closed": false,
+    "display_phone": "(212) 944-7792",
+    "id": "lazzaras-pizza-new-york",
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "sandwiches",
+        "title": "Sandwiches"
+      }
+    ],
+    "location": {
+      "city": "New York",
+      "display_address": [
+        "221 W 38th St",
+        "New York, NY 10018"
+      ],
+      "address1": "221 W 38th St",
+      "address2": "",
+      "address3": "",
+      "state": "NY",
+      "country": "US",
+      "zip_code": "10018"
+    }
+  },
+  {
+    "_id": "58ae56467b947e2e79a2f96e",
+    "distance": 45.178036216,
+    "review_count": 184,
+    "name": "Famous Amadeus Pizza",
+    "rating": 3,
+    "url": "https://www.yelp.com/biz/famous-amadeus-pizza-new-york?adjust_creative=ArEVrZ-_cCxPph97oAQkgg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ArEVrZ-_cCxPph97oAQkgg",
+    "price": "$",
+    "coordinates": {
+      "latitude": 40.749794,
+      "longitude": -73.994804
+    },
+    "phone": "+12129041112",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/h9gJE_XBnr8FCdOCwvCUfw/o.jpg",
+    "is_closed": false,
+    "display_phone": "(212) 904-1112",
+    "id": "famous-amadeus-pizza-new-york",
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "italian",
+        "title": "Italian"
+      },
+      {
+        "alias": "burgers",
+        "title": "Burgers"
+      }
+    ],
+    "location": {
+      "city": "New York",
+      "display_address": [
+        "408 8th Ave",
+        "New York, NY 10001"
+      ],
+      "address1": "408 8th Ave",
+      "address2": "",
+      "address3": "",
+      "state": "NY",
+      "country": "US",
+      "zip_code": "10001"
+    }
+  },
+  {
+    "_id": "58ae56467b947e2e79a2f9b6",
+    "distance": 782.1388537583999,
+    "review_count": 168,
+    "name": "2 Bros Pizza",
+    "rating": 3.5,
+    "url": "https://www.yelp.com/biz/2-bros-pizza-new-york-3?adjust_creative=ArEVrZ-_cCxPph97oAQkgg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ArEVrZ-_cCxPph97oAQkgg",
+    "price": "$",
+    "coordinates": {
+      "latitude": 40.75695,
+      "longitude": -73.9935
+    },
+    "phone": "+12127770600",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/3CZHMTCMfXiJnCOhlt-xPw/o.jpg",
+    "is_closed": false,
+    "display_phone": "(212) 777-0600",
+    "id": "2-bros-pizza-new-york-3",
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "location": {
+      "city": "New York",
+      "display_address": [
+        "542 9th Ave",
+        "New York, NY 10018"
+      ],
+      "address1": "542 9th Ave",
+      "address2": "",
+      "address3": "",
+      "state": "NY",
+      "country": "US",
+      "zip_code": "10018"
+    }
+  },
+  {
+    "_id": "58ae56467b947e2e79a2f9fe",
+    "distance": 845.693525006,
+    "review_count": 274,
+    "name": "Little Italy Pizza",
+    "rating": 3.5,
+    "url": "https://www.yelp.com/biz/little-italy-pizza-new-york-7?adjust_creative=ArEVrZ-_cCxPph97oAQkgg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ArEVrZ-_cCxPph97oAQkgg",
+    "price": "$",
+    "coordinates": {
+      "latitude": 40.74758,
+      "longitude": -73.98481
+    },
+    "phone": "+12124815200",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/aqeToVW35jt2b_Wv544TdA/o.jpg",
+    "is_closed": false,
+    "display_phone": "(212) 481-5200",
+    "id": "little-italy-pizza-new-york-7",
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "location": {
+      "city": "New York",
+      "display_address": [
+        "2 E 33rd St",
+        "New York, NY 10016"
+      ],
+      "address1": "2 E 33rd St",
+      "address2": "",
+      "address3": "",
+      "state": "NY",
+      "country": "US",
+      "zip_code": "10016"
+    }
+  }
+]

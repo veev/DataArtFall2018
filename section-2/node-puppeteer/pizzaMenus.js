@@ -1,8 +1,7 @@
 const fs = require('fs')
-const path = require('path')
 const puppeteer = require('puppeteer')
 
-const yelpData = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'yelp-inGoogle-pizza.json'), 'utf8'))
+const yelpData = JSON.parse(fs.readFileSync('../data/yelp-pizzerias.json', 'utf8'))
 
 const baseUrl = `https://www.yelp.com`
 
@@ -32,14 +31,8 @@ async function getRestaurantInfo(page, id, filename) {
   await page.waitFor(randomIntFromInterval(900,1200))
   await page.goto(queryStringBiz)
 
-  const CLOSED_SELECTOR = `#wrap > div.biz-country-us > div > div.top-shelf > div > div.alert.alert-error > p`
   const NAME_SELECTOR = `#wrap > div.biz-country-us > div > div.top-shelf > div > div.biz-page-header.clearfix > div.biz-page-header-left > div > h1`
   const PHONE_SELECTOR = `#wrap > div.biz-country-us > div > div.top-shelf > div > div.biz-page-subheader > div.mapbox-container > div > div.mapbox-text > ul > li:nth-child(4) > span.biz-phone`
-
-  const isClosed = await page.evaluate((sel) => {
-    let element = document.querySelector(sel)
-    return element ? element.innerText : null
-  }, CLOSED_SELECTOR)
 
   const name = await page.evaluate((sel) => {
     let element = document.querySelector(sel)
@@ -51,92 +44,22 @@ async function getRestaurantInfo(page, id, filename) {
     return element ? element.innerText : null
   }, PHONE_SELECTOR)
 
-  if (isClosed) {
-    console.log('isClosed', isClosed)
-    return
-  }
-
   let fileInfo = {}
   fileInfo.name = name
   fileInfo.phone = phone_number
   // console.log(fileInfo)
 
-  // get Menu Stuff
+  // get Menu Stuff - wait for a random amount of time to confuse the servers
   await page.waitFor(randomIntFromInterval(900,1200))
+  // change page to menu page
   await page.goto(queryStringMenu)
-
-  const MENU_SELECTOR = `#super-container > div.container.biz-menu > div.menu-header > ul > li:nth-child(2)`
-
-  const menuType = await page.evaluate((sel) => {
-    let element = document.querySelector(sel)
-    return element ? element.innerText : null
-  }, MENU_SELECTOR)
-
-  console.log('menuType:', menuType)
-
-  const PIZZA_INFO_SELECTOR = `#super-container > div.container.biz-menu > div.clearfix.layout-block.layout-a > div.column.column-alpha > div > div > h2`
-
-  const mainPageSections = await page.evaluate((sel) => {
-    let items = []
-    let elements = document.querySelectorAll(sel)
-    elements.forEach( el => {
-      items.push(el.innerText)
-    })
-    return items
-  }, PIZZA_INFO_SELECTOR)
-
-  // console.log(mainPageSections)
-
-  const hasPizzaSectionMainPage = mainPageSections.find( section => {
-    return section.toLowerCase().includes('pizza')
-  })
-
-  console.log('hasPizzaSectionMainPage', hasPizzaSectionMainPage)
-
-  if (hasPizzaSectionMainPage) {
-    // Main Menu
-    // stay on menu page
-    console.log(menuType, 'stay on menu page')
-    await getMenu(page, id, filename, fileInfo)
-    
-  } else if (menuType !== null) {
-    // Pizza Sub Menu Case
-    console.log(menuType, 'go to submenu page')
-
-    const MENU_SECTION_SELECTOR = `#super-container > div.container.biz-menu > div.clearfix.layout-block.layout-a > div.column.column-alpha > ul > li`
-
-    const submenuLinks = await page.evaluate((sel) => {
-      let items = []
-      let elements = document.querySelectorAll(sel)
-      elements.forEach( el => {
-        let link = el.querySelector('a')
-        if (link) items.push(link.href)
-      })
-      return items
-    }, MENU_SECTION_SELECTOR)
-
-    //console.log(submenuLinks)
-
-    const pizzaLink = submenuLinks.find( href => {
-      return href.includes('pizza')
-    })
-
-    console.log('pizzaLink', pizzaLink)
-
-    if (pizzaLink) {
-      await page.goto(pizzaLink)
-      await getMenu(page, id, filename, fileInfo)
-    } else {
-      return
-    }
-  } else {
-    console.log('not a menu page - skip')
-    return
-  }
+  // get menu data and write it to a JSON file
+  await getMenu(page, id, filename, fileInfo)
 }
 
 async function getMenu(page, id, filename, fileInfo) {
-  const PIZZA_MENU_ROW_ITEM = `#super-container > div.container.biz-menu > div.clearfix.layout-block.layout-a > div.column.column-alpha > div > div > div` // > div > div.arrange_unit.arrange_unit--fill > div`
+  const MENU_ROW_ITEM = `#super-container > div.container.biz-menu > div.clearfix.layout-block.layout-a > div.column.column-alpha > div > div > div`
+  //#super-container > div.container.biz-menu > div.clearfix.layout-block.layout-a > div.column.column-alpha > div > div:nth-child(2) > div:nth-child(1) > div
   const menuItems = await page.evaluate((sel) => {
     let items = []
     const rows = document.querySelectorAll(sel)
@@ -152,6 +75,7 @@ async function getMenu(page, id, filename, fileInfo) {
       if (row.querySelector('div.menu-item-prices.arrange_unit > ul > li.menu-item-price-amount')) {
         menuItem.price = row.querySelector('div.menu-item-prices.arrange_unit > ul > li.menu-item-price-amount').innerText
       }
+      // lazaras has prices in this format
       if (row.querySelector('div.menu-item-prices.arrange_unit > table > tbody')) {
         const prices = row.querySelectorAll('div.menu-item-prices.arrange_unit > table > tbody > tr')
         const priceArray = []
@@ -170,20 +94,23 @@ async function getMenu(page, id, filename, fileInfo) {
       items.push(menuItem)
     })
     return items
-  }, PIZZA_MENU_ROW_ITEM)
+  }, MENU_ROW_ITEM)
 
   //console.log(menuItems)
 
+  // if we were able to save a restaurant menu, write it to a file
   if (menuItems.length > 0) {
     fileInfo.restaurant_id = id
     fileInfo.menu = menuItems
-    fs.writeFileSync(path.join(__dirname, `..`, `data`, `pizza_menus_yelp_2`, filename), JSON.stringify(fileInfo, null, 4), 'utf8')
+    // make sure the file pizza-menus exists in the data folder, otherwise you'll get an error
+    fs.writeFileSync(`../data/pizza-menus/${filename}`, JSON.stringify(fileInfo, null, 4), 'utf8')
     console.log(`saved menu for ${fileInfo.name}`)
   } else {
     console.log(`no menu for ${id}`)
   }
 }
 
+// this helps confuse the yelp server so you aren't requesting at the same interval, prevents you from getting shut out more easily
 function randomIntFromInterval(min,max)
 {
     return Math.floor(Math.random()*(max-min+1)+min);

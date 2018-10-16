@@ -100,7 +100,7 @@ October 2nd – Week 5. Topic survey & technical workshop (RiTA) - [slides](http
 
 October 9th - NO CLASS, Legislative Day 
 
-October 16th – Week 6. Discussion of readings & overview of other resources
+October 16th – Week 6. Discussion of readings & overview of other resources (puppeteer.js)
 
 October 23rd – Week 7. Guest Speaker (TBD) & Project presentations
 
