@@ -100,9 +100,9 @@ October 2nd – Week 5. Topic survey & technical workshop (RiTA) - [slides](http
 
 October 9th - NO CLASS, Legislative Day 
 
-October 16th – Week 6. Discussion of readings & overview of other resources (puppeteer.js)
+October 16th – Week 6. Discussion of readings & overview of other resources (puppeteer.js) - [slides](https://docs.google.com/presentation/d/1UvfWT64ZXkD3xCrxYQGq_MVAwvSx8gs1o-FrbbWQ-_A/edit?usp=sharing) shown in class
 
-October 23rd – Week 7. Guest Speaker (TBD) & Project presentations
+October 23rd – Week 7. Guest Speaker ([Roopa Vasudevan](https://rouxpz.com/)) & Project presentations
 
 ### Data & Publics
 
