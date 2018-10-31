@@ -1,3 +1,5 @@
+// download csv here: https://developer.here.com/documentation/geovisualization/topics/sample-datasets.html
+
 const fs = require('fs')
 // install node-csv-parse with npm
 const parse = require('csv-parse/lib/sync')

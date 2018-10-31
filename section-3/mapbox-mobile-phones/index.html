@@ -17,7 +17,7 @@
 <div id='map'></div>
 
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoidG9wb3MiLCJhIjoiY2o2eHh2dzNvMXBiZDJ3czZwYnVzcWE1dyJ9.K9k_YOdxOrAXuxgRdwo6mw';
+mapboxgl.accessToken = ''; // add your own mapbox token to make this example work
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v9',
@@ -34,7 +34,8 @@ console.log('loaded map')
     d3.json('../data/Mobile_activity_1month_scrambled.geojson').then(data => {
         console.log('loaded data')
         const maxCount = d3.max(data.features, d => d.properties.count)
-        console.log(maxCount)
+        console.log(maxCount) // max is over 2300, so might not make sense for max radius value if it's an outlier
+
         // add loaded data as source to map
         map.addSource('phones', {
             'type':'geojson',
@@ -61,11 +62,6 @@ console.log('loaded map')
                   1, 'LightSeaGreen',
                   5, 'SandyBrown',
                   200, 'OrangeRed'
-                  // ['linear'],
-                  // ['get', 'count'],
-                  // 0,'cyan',
-                  // 10, 'purple',
-                  // 100, 'red'
                 ]
             }
         })
