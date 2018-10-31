@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Mobile phones</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoidG9wb3MiLCJhIjoiY2o2eHh2dzNvMXBiZDJ3czZwYnVzcWE1dyJ9.K9k_YOdxOrAXuxgRdwo6mw';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v9',
+    center: [-98, 38.88],
+    minZoom: 2,
+    zoom: 4
+})
+
+map.on('load', function() {
+
+console.log('loaded map')
+
+    //load data from geojson
+    d3.json('../data/Mobile_activity_1month_scrambled.geojson').then(data => {
+        console.log('loaded data')
+        const maxCount = d3.max(data.features, d => d.properties.count)
+        console.log(maxCount)
+        // add loaded data as source to map
+        map.addSource('phones', {
+            'type':'geojson',
+            'data': data
+        })
+
+        // add circle layer to map
+        map.addLayer({
+            'id': 'phoneLayer',
+            'type': 'circle',
+            'source': 'phones',
+            'paint': {
+                'circle-opacity': 0.4,
+                'circle-radius': ['interpolate',
+                  ['linear'],
+                  ['get', 'count'],
+                  1, 2,
+                  5, 10,
+                  200, 20
+                ],
+                'circle-color': ['interpolate',
+                  ['linear'],
+                  ['get', 'count'],
+                  1, 'LightSeaGreen',
+                  5, 'SandyBrown',
+                  200, 'OrangeRed'
+                  // ['linear'],
+                  // ['get', 'count'],
+                  // 0,'cyan',
+                  // 10, 'purple',
+                  // 100, 'red'
+                ]
+            }
+        })
+    }).catch(e => {
+      console.log(e)
+    })
+})
+
+map.on('sourcedata', function() {
+// console.log('source data', map.getSource('phones'))
+})
+
+
+
+
+</script>
+
+</body>
+</html>
