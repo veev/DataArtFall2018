@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Mobile phones</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+
+<script>
+mapboxgl.accessToken = '' // add your own mapbox token to make this example work
+const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v9',
+    center: [ -73.97332, 40.685787 ], // starting position [lng, lat]
+    minZoom: 2,
+    zoom: 10
+})
+
+// load geojson data once base map has loaded
+map.on('load', () => {
+console.log('loaded map')
+
+    // load data with d3 (just my preference, load it another way if you prefer)
+    d3.json('../data/CityCouncilDistricts.geojson').then(data => {
+      console.log(data)
+
+      // map source (data) needs a name, type and data
+      map.addSource('city-council-districts', { type: 'geojson', data: data })
+
+      // map layer needs an id, type, the source and a style
+      map.addLayer({
+        'id': 'nyc-city-council',
+        'type': 'fill',
+        'source': 'city-council-districts',
+        'paint': {
+          'fill-color': '#088',
+          'fill-outline-color': '#088',
+          'fill-opacity': 0.4
+        }
+      })
+
+      // map layer needs an id, type, the source and a style
+      map.addLayer({
+        'id': 'nyc-city-council-border',
+        'type': 'line',
+        'source': 'city-council-districts',
+        'paint': {
+          'line-color': '#088',
+          'line-width': 2,
+          'line-opacity': 1
+        }
+      })
+
+      const popup = new mapboxgl.Popup()
+
+      // add interactivity to see a popup with info about a district
+      map.on('mousemove', 'nyc-city-council', (e) => {
+        
+        popup.setLngLat(e.lngLat)
+          .setHTML("City Council District " + e.features[0].properties.coun_dist)
+          .addTo(map);
+      })
+
+      map.on('mouseenter', 'nyc-city-council', () => {
+        // Change the cursor style as a UI indicator.
+        map.getCanvas().style.cursor = 'pointer'
+      })
+
+      map.on('mouseleave', 'nyc-city-council', () => {
+        // Change the cursor style back as a UI indicator.
+        map.getCanvas().style.cursor = ''
+        popup.remove()
+      })
+
+      // add mapbox geocoder to look up an address!
+      const geocoder = new MapboxGeocoder({ 
+        accessToken: mapboxgl.accessToken
+      })
+      map.addControl(geocoder)
+
+      // create an empty array to keep track of popups
+      const popups = []
+
+      // listen to geocoder's 'result' event to see which address and coordinate is searched
+      geocoder.on('result', res => {
+
+        // if there's already a city council popup, erase it!
+        if (popups.length > 0) {
+          console.log(popups)
+
+          //remove all the popups from the map if they already exist
+          popups.forEach(popup => {
+            popup.remove()
+          })
+        }
+        console.log(res.result)
+
+        // put lat / lon into a turf point (just for a shorter variable name)
+        const pt = turf.point(res.result.geometry.coordinates)
+        // console.log(pt)
+
+        //iterate through multipolygons to see which one point is inside
+        data.features.forEach(feature => {
+          // turf.inside is a method to check whether a point is inside a polygon
+          if (turf.inside(pt, feature)) {
+
+            const councilInfo = new mapboxgl.Popup()
+              .setLngLat(pt.geometry.coordinates)
+              .setHTML("You're in city council district " + feature.properties.coun_dist)
+              .addTo(map)
+            popups.push(councilInfo)
+          }
+        })
+      })
+
+    }).catch(e => {
+      console.log(e)
+    })
+})
+
+map.on('sourcedata', function() {
+// console.log('source data', map.getSource('phones'))
+})
+
+</script>
+
+</body>
+</html>
