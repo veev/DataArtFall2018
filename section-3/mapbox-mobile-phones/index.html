@@ -18,64 +18,57 @@
 
 <script>
 mapboxgl.accessToken = ''; // add your own mapbox token to make this example work
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
-    center: [-98, 38.88],
-    minZoom: 2,
-    zoom: 4
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/light-v9',
+  center: [-98, 38.88],
+  minZoom: 2,
+  zoom: 4
 })
 
 map.on('load', function() {
 
 console.log('loaded map')
 
-    //load data from geojson
-    d3.json('../data/Mobile_activity_1month_scrambled.geojson').then(data => {
-        console.log('loaded data')
-        const maxCount = d3.max(data.features, d => d.properties.count)
-        console.log(maxCount) // max is over 2300, so might not make sense for max radius value if it's an outlier
+  //load data from geojson
+  d3.json('../data/Mobile_activity_1month_scrambled.geojson').then(data => {
+    console.log('loaded data')
+    const maxCount = d3.max(data.features, d => d.properties.count)
+    console.log(maxCount) // max is over 2300, so might not make sense for max radius value if it's an outlier
 
-        // add loaded data as source to map
-        map.addSource('phones', {
-            'type':'geojson',
-            'data': data
-        })
-
-        // add circle layer to map
-        map.addLayer({
-            'id': 'phoneLayer',
-            'type': 'circle',
-            'source': 'phones',
-            'paint': {
-                'circle-opacity': 0.4,
-                'circle-radius': ['interpolate',
-                  ['linear'],
-                  ['get', 'count'],
-                  1, 2,
-                  5, 10,
-                  200, 20
-                ],
-                'circle-color': ['interpolate',
-                  ['linear'],
-                  ['get', 'count'],
-                  1, 'LightSeaGreen',
-                  5, 'SandyBrown',
-                  200, 'OrangeRed'
-                ]
-            }
-        })
-    }).catch(e => {
-      console.log(e)
+    // add loaded data as source to map
+    map.addSource('phones', {
+      'type':'geojson',
+      'data': data
     })
+
+    // add circle layer to map
+    map.addLayer({
+      'id': 'phoneLayer',
+      'type': 'circle',
+      'source': 'phones',
+      'paint': {
+        'circle-opacity': 0.4,
+        'circle-radius': ['interpolate',
+          ['linear'],
+          ['get', 'count'],
+          1, 2,
+          5, 10,
+          200, 20
+        ],
+        'circle-color': ['interpolate',
+          ['linear'],
+          ['get', 'count'],
+          1, 'LightSeaGreen',
+          5, 'SandyBrown',
+          200, 'OrangeRed'
+        ]
+      }
+    })
+  }).catch(e => {
+    console.log(e)
+  })
 })
-
-map.on('sourcedata', function() {
-// console.log('source data', map.getSource('phones'))
-})
-
-
-
 
 </script>
 
