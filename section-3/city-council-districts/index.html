@@ -21,6 +21,11 @@
 
 <script>
 mapboxgl.accessToken = '' // add your own mapbox token to make this example work
+
+// first thing, declare your map object
+// the div id where you want to put the map should match the value for the container
+// all maps need a style, see default options through mapbox studio or style your own
+// define a center and zoom level, and additional arguments as desired
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v9',
@@ -37,10 +42,11 @@ console.log('loaded map')
     d3.json('../data/CityCouncilDistricts.geojson').then(data => {
       console.log(data)
 
-      // map source (data) needs a name, type and data
+      // map needs source data before it can show anything. source needs an id, type and data
       map.addSource('city-council-districts', { type: 'geojson', data: data })
 
-      // map layer needs an id, type, the source and a style
+      // map layer styles the source. see the mapbox style specification for syntax. 
+      // layer needs an id, type, source and a style
       map.addLayer({
         'id': 'nyc-city-council',
         'type': 'fill',
@@ -52,6 +58,7 @@ console.log('loaded map')
         }
       })
 
+      // to create a thicker border between districts we need to make a line layer over the fill layer
       // map layer needs an id, type, the source and a style
       map.addLayer({
         'id': 'nyc-city-council-border',
@@ -114,13 +121,22 @@ console.log('loaded map')
 
         //iterate through multipolygons to see which one point is inside
         data.features.forEach(feature => {
-          // turf.inside is a method to check whether a point is inside a polygon
-          if (turf.inside(pt, feature)) {
+          
+          console.log(feature)
 
+          // turf.booleanPointInPolygon is a method to check whether a point is inside a polygon or multipolygon
+          // in class I was trying turf.booleanWithin, which did not take multipolygons as arguments
+          if (turf.booleanPointInPolygon(pt, feature)) {
+
+            // create a popup if the address entered is in a nyc city council district
+            // create a popup telling the user which district the address is in
             const councilInfo = new mapboxgl.Popup()
               .setLngLat(pt.geometry.coordinates)
               .setHTML("You're in city council district " + feature.properties.coun_dist)
               .addTo(map)
+
+            // add it to the popups array so we can remove the previous ones added to map
+            // if user inputs another address
             popups.push(councilInfo)
           }
         })
@@ -129,10 +145,6 @@ console.log('loaded map')
     }).catch(e => {
       console.log(e)
     })
-})
-
-map.on('sourcedata', function() {
-// console.log('source data', map.getSource('phones'))
 })
 
 </script>
