@@ -115,9 +115,9 @@ October 23rd – Week 7. Guest Speaker ([Roopa Vasudevan](https://rouxpz.com/)) 
 
 October 30th – Week 8. Topic survey & technical workshop (Web Maps / Public Data) - [slides](https://drive.google.com/open?id=1LFdUv0XEP97gH7Gz5WamaiNf_vYaqFfR) shown in class
 
-November 6th – Week 9. Discussion of readings & overview of other resources (Leaflet.js / Mapbox GL / Mappa + p5.js)
+November 6th – Week 9. Discussion of readings & overview of other resources (Leaflet.js / Mapbox GL / Mappa + p5.js / Turf.js) - [slides](https://drive.google.com/open?id=1wqvJZGTy5Ifwo2R1bUnQ0N_scw-5PuOT) shown in class
 
-November 13th – Week 10. Guest Speaker (TBD) & Project presentations
+November 13th – Week 10. Guest Speaker (Mahir Yavuz) & Project presentations
 
 ### Ethics, Humans & Responsibility
 
