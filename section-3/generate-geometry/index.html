@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Mobile phones</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoidmVldiIsImEiOiIzdzVEVDdrIn0.z3N2X1Fk7rx4wXesVf0-rQ' // add your own mapbox token to make this example work
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/light-v9',
+  center: [ -73.97332, 40.685787 ], // starting position [lng, lat]
+  minZoom: 2,
+  zoom: 10
+})
+
+map.on('load', () => {
+  // you can use data directly from nyc open data without downloading the file, just specify their api endpoint
+  d3.json('https://data.cityofnewyork.us/resource/4bew-e6kg.json').then( data => {
+    console.log(data)
+
+    // get the data into a format we can map -- geojson!
+    const features = data.map( d => {
+
+      // turf has a way to generate a feature, but needs a specific kind of geometry object first
+      const geometry = {
+        // we know that this data should be a Point feature
+        'type': 'Point',
+        // we get the coordinates from the data by accessing their longitude and latitude data
+        'coordinates': [d.location_1.longitude, d.location_1.latitude]
+      }
+      // for ease, just put all the original data into the properties object
+      const properties = d
+
+      // create a feature with turf using the geometry and properties objects
+      const feature = turf.feature(geometry, properties)
+      // return the feature since the map function needs to return values for the new array
+      return feature
+    })
+
+    // what about geometry instead of points?
+    const circleFeatures = data.map( d => {
+      // use turf to get a 'turf point'
+      const point = turf.point([d.location_1.longitude, d.location_1.latitude])
+
+      // use turf to get a buffer around the point, could also use circle function
+      const buffered = turf.buffer(point, 1, {units: 'miles'})
+
+      // for ease, just put all the original data into the properties object
+      buffered.properties = d
+
+      return buffered
+    })
+    // console.log(circleFeatures[0])
+    // we can also use turf to create a feature collection, which is the data type we need for the mapbox source
+    const featureCollection = turf.featureCollection(features)
+    console.log(featureCollection)
+    // map source (data) needs a name, type and data
+    map.addSource('hospitals', { type: 'geojson', data: featureCollection })
+
+    const featureColBuffer = turf.featureCollection(circleFeatures)
+    map.addSource('hospitals-buffer', { type: 'geojson', data: featureColBuffer })
+
+    
+
+    // what if we wanted to know the radius that corresponds to a 5 minute drive?
+    // add circle layer
+    map.addLayer({
+      'id':'hospital-circles',
+      'type': 'fill',
+      'source': 'hospitals-buffer',
+      'paint': {
+        'fill-color': '#088',
+        'fill-opacity': 0.4
+      }
+    })
+
+    // add point layer
+    map.addLayer({
+      'id':'hospital-points',
+      'type': 'circle',
+      'source': 'hospitals',
+      'paint': {
+        'circle-color': 'hotpink',
+        'circle-radius': 4,
+        'circle-opacity': 1
+      }
+    })
+
+  }).catch(e => {
+    console.log(e)
+  })
+})
+
+
+
+</script>
+
+</body>
+</html>
