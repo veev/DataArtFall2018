@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>d3 Update Pattern</title>
+    <style>
+   svg text {
+    pointer-events: none;
+  }
+  #wrapper {
+    height: 220px;
+  }
+
+</style>
+</head>
+<body>
+  <div id="wrapper"></div>
+
+  <div class="menu">
+    <button onClick="updateScores();">Update scores</button>
+    <button onClick="addPerson();">Add person</button>
+    <button onClick="removePerson();">Remove person</button>
+  </div>
+
+<script src='//d3js.org/d3.v5.min.js' charset='utf-8'></script>
+<script>
+  // code modified from http://jsbin.com/gist/e890d5ad36af3d949f275e35b41a99d6
+  const names = ['Andy', 'Beth', 'Craig', 'Diane', 'Evelyn', 'Fred', 'Georgia', 'Harry', 'Isabel', 'John']
+  const myData = [
+      {
+        'name': 'Andy',
+        'score': 37
+      },
+      {
+        'name': 'Beth',
+        'score': 39
+      },
+      {
+        'name': 'Craig',
+        'score': 31
+      },
+      {
+        'name': 'Diane',
+        'score': 35
+      },
+      {
+        'name': 'Evelyn',
+        'score': 38
+      }
+    ]
+
+  const svg = d3.select('#wrapper')
+      .append('svg')
+        .attr('width', 500)
+        .attr('height', 200)
+
+  const barMax = 400
+  const barScale = d3.scaleLinear()
+                     .domain([0, 100])
+                     .range([0, barMax])
+
+  const randomInt = () => {
+    return Math.floor(10 * Math.random())
+  }
+
+  updateScores = () => {
+    const updatedData = myData.map( d => {
+      d.score = 30 + randomInt()
+      return d
+    })
+
+    updateBars(updatedData)
+  }
+
+  addPerson = () => {
+    if (myData.length === 10) {
+      return
+    }
+
+    myData.push({
+      name: names[myData.length],
+      score: 30 + randomInt()
+    })
+    // adds a new object to the end of the array
+
+    updateBars(myData)
+  }
+
+  removePerson = () => {
+    if (myData.length === 0) {
+      return
+    }
+
+    myData.pop() // removes element at the end of the array
+
+    updateBars(myData)
+  }
+
+  updateBars = (data) => {
+
+    const bars = svg.selectAll('rect')
+    .data(data)
+    
+    bars.enter()
+    .append('rect')
+      .attr('fill', 'steelblue') // you can also set the color with a class
+      .attr('width', d => barScale(d.score))
+      .attr('height', 20)
+      .attr('y', (d, i) => i * 22)
+      .attr('x', d => 0)
+    .merge(bars)
+    //   .transition()
+    //   .duration(1000)
+      .attr('width', d => barScale(d.score))
+
+    bars.exit()
+    //   .transition()
+    //   .duration(1000)
+    .remove()
+      // .append('rect')
+
+    console.log(bars)
+
+  }
+
+  // initializeData()
+  updateBars(myData)
+
+
+
+</script>
+</body>
+</html>
