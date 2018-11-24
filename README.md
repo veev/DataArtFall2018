@@ -129,8 +129,8 @@ November 13th – Week 10. Guest Speaker (Mahir Yavuz) & Project presentations
 
 November 20th – Week 11. Topic survey & overview of the landscape
 
-November 27th – Week 12. Technical workshop (THREE.js / Unity)
+November 27th – Week 12. Discussion of readings & overview of other resources
 
-December 4th – Week 13. Discussion of readings & overview of other resources
+December 4th – Week 13. Technical workshop (THREE.js / Unity)
 
 December 11th - Week 14. Guest Speaker (TBD) & Project presentations

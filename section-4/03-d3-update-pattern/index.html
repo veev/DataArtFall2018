@@ -99,7 +99,9 @@
   updateBars = (data) => {
 
     const bars = svg.selectAll('rect')
-    .data(data)
+      .data(data)
+
+    console.log(bars)
     
     bars.enter()
     .append('rect')
@@ -109,17 +111,17 @@
       .attr('y', (d, i) => i * 22)
       .attr('x', d => 0)
     .merge(bars)
-    //   .transition()
-    //   .duration(1000)
+      .transition()
+      .duration(1000)
       .attr('width', d => barScale(d.score))
 
     bars.exit()
-    //   .transition()
-    //   .duration(1000)
+      .transition()
+      .duration(1000)
     .remove()
-      // .append('rect')
+      .append('rect')
 
-    console.log(bars)
+    // console.log(bars)
 
   }
 
