@@ -127,7 +127,7 @@ November 13th – Week 10. Guest Speaker (Mahir Yavuz) & Project presentations
 * [A chronology of tactics: Art tackles Big Data and the environment,](http://journals.sagepub.com/doi/abs/10.1177/2053951716665869) Brooke Singer
 * [You Say Data, I Say System,](https://hackernoon.com/you-say-data-i-say-system-54e84aa7a421) Jer Thorp
 
-November 20th – Week 11. Topic survey & overview of the landscape
+November 20th – Week 11. Topic survey & overview of the landscape - [slides](https://drive.google.com/file/d/1kvxzyURjg3QWGPk98nUleT7T63i4sEok/view?usp=sharing) shown in class
 
 November 27th – Week 12. Discussion of readings & overview of other resources
 
