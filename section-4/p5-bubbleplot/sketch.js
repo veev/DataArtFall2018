@@ -76,6 +76,7 @@ function draw() {
 	});
 }
 
+// Create a class for each Country and visualize it as a circle
 function Country(name, x, y, size) {
 	this.name = name
 	this.pos = createVector(x, y)
@@ -101,6 +102,7 @@ function Country(name, x, y, size) {
 		text(this.name, this.pos.x, this.pos.y)
 	}
 
+	// mouseover logic to display name of country
 	this.isOverCircle = function() {
 		const distX = this.pos.x - mouseX
 		const distY = this.pos.y - mouseY

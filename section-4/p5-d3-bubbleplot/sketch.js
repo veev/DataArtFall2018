@@ -7,7 +7,7 @@ function setup() {
 	w = width - 2 * margin, // chart area width and height
 	h = height - 2 * margin;
 
-	//load data with d3, use data within the anonymous callback function
+	//load data with d3, use data within the Promise (after then and before catch)
 	d3.csv('../data/worldwide-health-lifeexpectancy-cut.csv').then( data => {
 		console.log(data)
 		// d3 map functions are useful for creating more convenient data structures
@@ -50,6 +50,8 @@ function setup() {
 		console.log(d3.extent(filteredData, healthData))
 		console.log(d3.extent(filteredData, lifeData))
 
+		// Use D3 to create scales to position the circles
+		// P5 has map, which is a linear scale, and lerp, which interpolates between two values
 		// x-scale
 		const xScale = d3.scaleLinear()
 			.domain([d3.min(filteredData, lifeData), d3.max(filteredData, lifeData)]) //set domain to [min,max] of data
@@ -71,7 +73,8 @@ function setup() {
 		createCanvas(width, height)
 		background(255)
 
-		// create circles
+		// iterate through the array of data
+		// create circles from the Country class
 		for (let i = 0; i < filteredData.length; i++) {
 			const d = filteredData[i]
 			fill(255, 0, 255, 50)
@@ -97,6 +100,7 @@ function draw() {
 	})
 }
 
+// Create a class for each Country and visualize it as a circle
 function Country(name, x, y, size) {
 	this.name = name
 	this.pos = createVector(x, y)
@@ -118,6 +122,7 @@ function Country(name, x, y, size) {
 		text(this.name, this.pos.x, this.pos.y);
 	}
 
+	// mouseover logic to display name of country
 	this.isMouseOverCircle = function() {
 		let distX = this.pos.x - mouseX
 		let distY = this.pos.y - mouseY
