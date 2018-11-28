@@ -129,7 +129,7 @@ November 13th – Week 10. Guest Speaker (Mahir Yavuz) & Project presentations
 
 November 20th – Week 11. Topic survey & overview of the landscape - [slides](https://drive.google.com/file/d/1kvxzyURjg3QWGPk98nUleT7T63i4sEok/view?usp=sharing) shown in class
 
-November 27th – Week 12. Discussion of readings & overview of other resources
+November 27th – Week 12. Discussion of readings & Color + Data Visualization & D3 - [slides](https://drive.google.com/file/d/17xZTm5SY54s0Py-wHHJDNeaOJcYkHbn4/view?usp=sharing) shown in class
 
 December 4th – Week 13. Technical workshop (THREE.js / Unity)
 
