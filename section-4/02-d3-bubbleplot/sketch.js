@@ -82,7 +82,7 @@ d3.csv("../data/worldwide-health-lifeexpectancy-cut.csv").then(data => {
 
 	//create our circles, one for each country data
 	const circles = svg.selectAll("circle")
-		.data(data) // bind the data
+		.data(filteredData) // bind the data
 		.enter() // update the subselection with data
 		.append("circle") //append circle svg elements to svg context
 		.attr("fill", d3.rgb(255, 0, 255))
