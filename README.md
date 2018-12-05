@@ -131,6 +131,6 @@ November 20th – Week 11. Topic survey & overview of the landscape - [slides](h
 
 November 27th – Week 12. Discussion of readings & Color + Data Visualization & D3 - [slides](https://drive.google.com/file/d/17xZTm5SY54s0Py-wHHJDNeaOJcYkHbn4/view?usp=sharing) shown in class
 
-December 4th – Week 13. Technical workshop (THREE.js / Unity)
+December 4th – Week 13. Technical workshop (THREE.js / Unity) - [slides](https://drive.google.com/open?id=1VWbgs9ofjYieevDYZvt1B6RCvHEzr9qD) shown in class
 
-December 11th - Week 14. Guest Speaker (TBD) & Project presentations
+December 11th - Week 14. Guest Speaker ([Brooke Singer](http://www.bsing.net/site/)) & Project presentations
