@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <title>My first three.js app</title>
+    <style>
+      body { margin: 0; }
+      canvas { width: 100%; height: 100% }
+    </style>
+  </head>
+  <body>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="lib/TrackballControls.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      // everything in THREE js needs a scene
+      const scene = new THREE.Scene()
+      // and a camera
+      const camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 )
+      // and a renderer
+      const renderer = new THREE.WebGLRenderer()
+      renderer.setSize( window.innerWidth, window.innerHeight )
+      
+      // add the renderer (in a canvas element) to the DOM
+      document.body.appendChild( renderer.domElement )
+
+      // add lighting so we can see our spheres
+      const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.125 )
+      directionalLight.position.x = Math.random() - 0.5
+      directionalLight.position.y = Math.random() - 0.5
+      directionalLight.position.z = Math.random() - 0.5
+      directionalLight.position.normalize()
+      scene.add( directionalLight )
+      
+      const AmbientLight = new THREE.AmbientLight(0x404040)
+      scene.add(AmbientLight)
+
+      // D3 scale stuff
+      const xScale = d3.scaleLinear()
+        .range([-100, 100]) // set the domain after loading data
+
+      const zScale = d3.scaleLinear()
+        .range([-100, 100])
+
+      const sizeScale = d3.scalePow()
+        .exponent(0.5)
+        .range([1, 20]);
+
+      // import data
+      d3.csv("../data/worldwide-health-lifeexpectancy-cut.csv").then(data => {
+        // console.log(data)
+
+        // Map the data so it has better key names (accessors)
+        // We need to use brackets instead of dot notation to access the existing keys
+        // since they have spaces in the them - access as strings
+        const mappedData = data.map( d => {
+          return {
+            name: d["Country Name"],
+            code: d["Country Code"],
+            health: d["2014 Health expenditure, total (% of GDP)"],
+            life: d["2014 Life expectancy at birth, total (years)"],
+            population: d["2014 Population, total"]
+          };
+        });
+        // console.log(mappedData)
+
+        // filter out rows with fields that don't contain all data fields
+        const filteredData = mappedData.filter( d => {
+          if (d.health != "" && d.life != "" && d.population != "") {
+            return d
+          }
+        })
+        console.log(filteredData)
+
+        // Set the domains of the scales using d3.extent
+        // (returns the min and max of the data array)
+        xScale.domain(d3.extent(filteredData, d => {
+          return +d.life
+        }))
+
+        zScale.domain(d3.extent(filteredData, d => {
+          return +d.health
+        }))
+
+        sizeScale.domain(d3.extent(filteredData, d => {
+          return +d.population
+        }))
+
+        // add spheres for data
+        const spheres = new THREE.Object3D()
+
+        filteredData.forEach( d => {
+          // spheres need a radius, width segment and height segment - 32 looks spherical
+          // use the size scale for the radius
+          // an object3D needs geometry and a materal
+          const sphere = new THREE.SphereGeometry( sizeScale(+d.population), 32, 32 )
+          const material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } )
+          
+          // combine the geometry and material to make a mesh
+          const sphereMesh = new THREE.Mesh( sphere, material )
+          // position the mesh in space
+          // use our xScale and zScale to position it in space
+          sphereMesh.position.x = xScale(+d.life)
+          sphereMesh.position.y = 0
+          sphereMesh.position.z = zScale(+d.health)
+
+          // add the mesh to our spheres object3d
+          spheres.add(sphereMesh)
+        
+        })
+        // add the spheres object 3D to the scene
+        scene.add( spheres )
+
+      }).catch( e => {
+        console.log(e)
+      })
+
+      // position the camera
+      camera.position.z = 5
+
+      // create a wrapper function around our call to render the renderer
+      const render = () => {
+        renderer.render( scene, camera )
+      }
+
+      //set up trackball controls
+      controls = new THREE.TrackballControls( camera, renderer.domElement )
+      controls.rotateSpeed = 0.5
+      controls.minDistance = 1
+      controls.maxDistance = 1000
+      controls.addEventListener( 'change', render )
+
+      // create a wrapper function that animates, renders and updates trackball controls
+      const animate = () => {
+        requestAnimationFrame( animate )
+
+        render()
+        controls.update()
+      }
+
+      // call the animate function to see all the things
+      animate()
+    </script>
+  </body>
+</html>
